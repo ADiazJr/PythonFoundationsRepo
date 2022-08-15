@@ -33,20 +33,33 @@
 # print(captialized_input)
 
 #Task 3
-possible_palindrome = input("Please Enter Possible Palindrome:")
-Palindrome = ""
+# possible_palindrome = input("Please Enter Possible Palindrome:")
+# Palindrome = ""
 
-for character in range(len(possible_palindrome) -1, -1 ,-1):
-    Palindrome += possible_palindrome[character]
-    palindrome_match = False
-while palindrome_match == False:
-    if Palindrome == possible_palindrome:
-        print(f'There was a Palindrome Match with {Palindrome}')
-        palindrome_match = True
+# for character in range(len(possible_palindrome) -1, -1 ,-1):
+#     Palindrome += possible_palindrome[character]
+#     palindrome_match = False
+# while palindrome_match == False:
+#     if Palindrome == possible_palindrome:
+#         print(f'There was a Palindrome Match with {Palindrome}')
+#         palindrome_match = True
+#     else:
+#         print('This word is not a Palindrome')
+#         palindrome_match = True
+
+#Task 4
+input_to_compress = input('PLease type something to compress:')
+compressed_input = ""
+string_match_number = 1
+for uncompressed_character in range(len(input_to_compress)):
+    if (uncompressed_character) >= (len(input_to_compress)-1):
+        compressed_input += str(string_match_number)
+        compressed_input += input_to_compress[uncompressed_character]
+        print(compressed_input)
+    elif input_to_compress[uncompressed_character] == input_to_compress[uncompressed_character +1]:
+        string_match_number += 1
     else:
-        print('This word is not a Palindrome')
-        palindrome_match = True
-
-
-
+        compressed_input += str(string_match_number)
+        compressed_input += input_to_compress[uncompressed_character]
+        string_match_number = 1
 
