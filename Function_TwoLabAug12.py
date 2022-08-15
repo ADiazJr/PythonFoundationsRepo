@@ -9,12 +9,12 @@ def shorten(string_one):
     print(shortened_version)
     return
 
-# shorten("Rocky")
+shorten("Rocky")
 
 # #Task 2
 def pBJ():
     for number in range(101):
-        if (number % 5) + (number % 3) == 0:
+        if number % 5 == 0 and number % 3 == 0:
             print('peanut butter jelly')
         elif (number % 5) == 0:
             print('jelly')                                                 
