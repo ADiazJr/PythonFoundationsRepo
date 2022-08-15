@@ -1,11 +1,11 @@
 #Task 1
-def word(greeting):
+def reverse(greeting):
     final_word = ""
     for index_number in range(len(greeting) - 1, -1, -1):
         final_word += greeting[index_number]
     return final_word
 
-hello_backwards = word("Hello")
+hello_backwards = reverse("Hello")
 print(hello_backwards)
 
 # #Task 2
