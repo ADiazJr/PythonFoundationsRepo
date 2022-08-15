@@ -1,3 +1,4 @@
+#Task 1
 # greeting = 'hello'
 # reverse_greeting = ''
 # for index_number in range(len(greeting) - 1, -1, -1):
@@ -5,13 +6,14 @@
 #     break
 # print(reverse_greeting)
 
-word = "Hello"
-final_word = ""
-for index_number in range(len(word) - 1, -1, -1):
-    final_word += word[index_number]
+# word = "Hello"
+# final_word = ""
+# for index_number in range(len(word) - 1, -1, -1):
+#     final_word += word[index_number]
 
-print(final_word)
+# print(final_word)
 
+#Task 2
 # original_input = input("what you want capitalized:")
 # captialized_input = ''
 
@@ -30,8 +32,21 @@ print(final_word)
 
 # print(captialized_input)
 
-# possible_palindrome = input("Do not type a Palindrome")
-# Palindrome = ""
+#Task 3
+possible_palindrome = input("Please Enter Possible Palindrome:")
+Palindrome = ""
 
-# for character in range(len(possible_palindrome))
+for character in range(len(possible_palindrome) -1, -1 ,-1):
+    Palindrome += possible_palindrome[character]
+    palindrome_match = False
+while palindrome_match == False:
+    if Palindrome == possible_palindrome:
+        print(f'There was a Palindrome Match with {Palindrome}')
+        palindrome_match = True
+    else:
+        print('This word is not a Palindrome')
+        palindrome_match = True
+
+
+
 
