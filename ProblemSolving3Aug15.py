@@ -5,6 +5,10 @@ def happy_number_check(possible_happy_number):
         if squared_value == 1:
             print("Number is happy")
             number_check = True
+        elif squared_value == possible_happy_number:
+            print('this is a sad number')
+            number_check = False
+            return
         elif squared_value !=1:
             squared_value = square(squared_value)
 def square(number_to_square):
@@ -16,4 +20,4 @@ def square(number_to_square):
 
 
     
-happy_number_check(13)
+happy_number_check(45)
