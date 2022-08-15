@@ -1,51 +1,51 @@
 # # #Task 1
-# def shorten(string_one):
-#     for character in range(len(string_one)):
-#         if character == 0:
-#             shortened_version = ''
-#             shortened_version += string_one[character]
-#         if (len(string_one) - character) == 1:
-#             shortened_version += string_one[character]
-#     print(shortened_version)
-#     return
+def shorten(string_one):
+    for character in range(len(string_one)):
+        if character == 0:
+            shortened_version = ''
+            shortened_version += string_one[character]
+        if (len(string_one) - character) == 1:
+            shortened_version += string_one[character]
+    print(shortened_version)
+    return
 
 # shorten("Rocky")
 
 # #Task 2
-# def pBJ():
-#     for number in range(101):
-#         if (number % 5) + (number % 3) == 0:
-#             print('peanut butter jelly')
-#         elif (number % 5) == 0:
-#             print('jelly')                                                 
-#         elif (number % 3) == 0:
-#             print('peanut butter')
-#         else:
-#             print(number)
+def pBJ():
+    for number in range(101):
+        if (number % 5) + (number % 3) == 0:
+            print('peanut butter jelly')
+        elif (number % 5) == 0:
+            print('jelly')                                                 
+        elif (number % 3) == 0:
+            print('peanut butter')
+        else:
+            print(number)
 
-# pBJ()
+pBJ()
 
 # #Task 3
-# def WLIndexing(string_two):
-#     final_result = " "
-#     for character_one in string_two:
-#         for character_two in range(len(string_two)):
-#             if len(string_two) >= character_two +1:
-#                 final_result += character_one
-#                 final_result += str(character_two)
-#                 character_one = str(string_two[character_two +1])
-#         print(final_result)
-#         break
-#     return WLIndexing
+def WLIndexing(string_two):
+    final_result = " "
+    for character_one in string_two:
+        for character_two in range(len(string_two)):
+            if len(string_two) >= character_two +1:
+                final_result += character_one
+                final_result += str(character_two)
+                character_one = str(string_two[character_two +1])
+        print(final_result)
+        break
+    return WLIndexing
 
-# def WLIndexing(string_two):
-#     final_result = " "
-#     for index in range(len(string_two)):
-#         final_result += string_two[index]
-#         final_result += str(index)
-#     print(final_result)
+def WLIndexing(string_two):
+    final_result = " "
+    for index in range(len(string_two)):
+        final_result += string_two[index]
+        final_result += str(index)
+    print(final_result)
 
-# WLIndexing("World Peace")
+WLIndexing("World Peace")
 
 #Task 4
 def ingr_search(ingredients):
@@ -64,24 +64,24 @@ def ingr_search(ingredients):
 ingr_search(['carrot', 'tomato', 'onion'])
 
 #Task 5
-# def reverse(list_one):
-#     list_reversed = " "
-#     for item in range(len(list_one)-1, -1, -1):
-#         list_reversed += list_one[item] + ", "
+def reverse(list_one):
+    list_reversed = " "
+    for item in range(len(list_one)-1, -1, -1):
+        list_reversed += list_one[item] + ", "
         
-#     return list_reversed
+    return list_reversed
 
-# list_i_want = reverse(['Yellow', 'purple', 'Orange'])
-# print(list_i_want)
+list_i_want = reverse(['Yellow', 'purple', 'Orange'])
+print(list_i_want)
 
 #Task 6
-# def drop_four(names):
-#     long_names = " "
-#     for name in names: 
-#         if len(name) >= 5:
-#             long_names += name +", "
-#     return long_names
+def drop_four(names):
+    long_names = " "
+    for name in names: 
+        if len(name) >= 5:
+            long_names += name +", "
+    return long_names
 
-# list_of_long_names = drop_four(["Rocky", 'Miriam', "Irene", "bob", "gil"])
-# print(list_of_long_names)
+list_of_long_names = drop_four(["Rocky", 'Miriam', "Irene", "bob", "gil"])
+print(list_of_long_names)
 
