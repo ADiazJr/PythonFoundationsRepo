@@ -45,20 +45,20 @@ def check_prime(user_input):
 
 check_prime(int(input("Please type number to check if it's prime:")))
 
-def fibonaccci():
+def fibonacci():
     fibonacci_sequence = [1,1]
     never = False
     while never is False:
         for number in range(100):
             number_after_addition = fibonacci_sequence[number +1] + (fibonacci_sequence[number])
             fibonacci_sequence.append(number_after_addition)
-fibonaccci()
+fibonacci()
 
-def fibonaccci(user_input):
+def fibonacci_input(user_input):
     fibonacci_sequence = [user_input,user_input]
     never = False
     while never is False:
         for number in range(100):
             number_after_addition = fibonacci_sequence[number +1] + (fibonacci_sequence[number])
             fibonacci_sequence.append(number_after_addition)
-fibonaccci(int(input("Type number to start Fibonacci Sequence:")))
+fibonacci_input(int(input("Type number to start Fibonacci Sequence:")))
