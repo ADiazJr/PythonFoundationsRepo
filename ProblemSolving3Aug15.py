@@ -24,15 +24,11 @@ def place_squared_value_in_list(squared_value,list_of_squared_value):
     list_of_squared_value.append(squared_value)
     return list_of_squared_value
 def check_value(return_of_list, squared_value):
-    list_ended = False
-    while list_ended == False:
-        for value in range(len(return_of_list)):
-            if squared_value == return_of_list[value]:
-                list_ended = True
-                return True
-            elif value == len(return_of_list)-1:
-                list_ended = True
-                return False
+    for value in range(len(return_of_list)):
+        if squared_value == return_of_list[value]:
+            return True
+        elif value == len(return_of_list)-1:
+            return False
 
 happy_number_check(input('Please Type to Check If Number Is Happy or Sad:'))
 
