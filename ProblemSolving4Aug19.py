@@ -9,14 +9,14 @@
 
 # def index_target_finder(list, target_number):
 #     list_og = len(list)
-#     for item in range(len(list)):
-#         for item2 in range(len(list)):
+#     for index in range(len(list)):
+#         for index2 in range(len(list)):
 #             sum = 0
-#             sum = list[item] +list[item2+1]
+#             sum = list[index] +list[index2+1]
 #             list.append(sum)
 #             if target_number in list:
 #                 return True
-#             elif (item2 +1) == list_og:
+#             elif (index2 +1) == list_og:
 #                 return False
 
 # task1()
@@ -37,13 +37,27 @@
 # palindrome_check(input("Please Enter Possible Palindrome:"))
 
 #Task 3
-def task3(example_list):
-    example_list.sort()
-    for number in range(len(example_list)):
-        if example_list[number+1] != (example_list[number]+1):
-            return False
-        else:
-            return True
+# def task3(example_list):
+#     example_list.sort()
+#     for index in range(len(example_list)):
+#         if example_list[index+1] != (example_list[index]+1):
+#             return False
+#         else:
+#             return True
 
-some_list1 = [5,7,3,4,6]
-print(task3(some_list1))
+# some_list1 = [5,7,3,4,6]
+# print(task3(some_list1))
+
+#Task 4
+def sum_of_arrays(array):
+    negative_sum = 0
+    positive_sum = 0
+    for number in array:
+        if number <= -1:
+            negative_sum = negative_sum + number
+        elif number >= 0:
+            positive_sum = positive_sum + number
+    return [positive_sum,negative_sum]
+
+use_case_array = [7,9,-3,-32,107,-1,36,95,-14,-99,21]
+print(sum_of_arrays(use_case_array))
