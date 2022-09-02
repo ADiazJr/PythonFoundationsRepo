@@ -1,3 +1,4 @@
+import re
 #Task 1
 
 def task1():
@@ -87,21 +88,76 @@ use_case_string = "3 9 0 1 4 8 10 2"
 print(high_and_low(use_case_string))
 
 #Task 6 
+
 def email_validation(email):
-    if comcheck(email) != True:
-        return False
+    if comcheck(email):
+        if atcheck(email):
+            if kinds(email):
+                print('Email validated')
+            else:
+                print('Email not validated')
+        else:
+            print('Email not validated')
+    else:
+        print('Email not validated')        
       
-def gmailcheck(email):
-    for index in range(len(email)):
-        if 
+def kinds(email):
+    validation = re.search('gmail|yahoo|outlook|hotmail', email)
+    if validation.string:
+        return True
+    else:
+        return False
+def atcheck(email):
+    validation = re.search('@', email)
+    if validation:
+        return True
+    else:
+        return False
 def comcheck(email):
-    concatenated_string = ''
-    concatenated_string += (email[-4] + email[-3]+ email[-2]+ email[-1]+email[-1])
-    if concatenated_string == ".com":
-        if 
+    validation = re.search(".com$", email)
+    if validation.string:
+        return True
     else:
         return False
 
 
-email = 'email.com'
+email = 'arturodiaz@gmail.com'
 email_validation(email)
+
+#Task 7
+# numericlist = "abcdefghijklmnopqrstubwxyz"
+# for number in range(0, 25):
+#     for character in numericlist:
+#         "abcdefghijklmnopqrstubwxyz"
+# print(numericlist)
+
+numericlist = {
+    'a': 1,
+    'b': 2,
+    'c': 3,
+    'd': 4,
+    'e': 5,
+    'f': 6,
+    'g': 7,
+    'h': 8,
+    'i': 9,
+    'j': 10,
+    'k': 11,
+    'l': 12,
+    'm': 13,
+    'n': 14,
+    'o': 15,
+    'p': 16,
+    'q': 17,
+    'r': 18,
+    's': 19,
+    't': 20,
+    'u': 21,
+    'v': 22,
+    'w': 23,
+    'x': 24,
+    'y': 25,
+    'z': 26
+}
+
+# print(ord('r'))
